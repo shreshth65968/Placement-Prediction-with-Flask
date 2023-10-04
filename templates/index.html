@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='css/mystyle.css')}}">
+    <title>Campus Placement Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    
+
+
+
+
+
+    <div class="container">
+    <h1 id="j">Campus Placement Prediction</h1>
+    <form method="POST" action="/">
+        <label for="gender">Gender:</label>
+        <select name="gender" required>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+        <br>
+        <label for="ssc_p">SSC Percentage:</label>
+        <input type="text" name="ssc_p"  required>
+        <br>
+        <label for="ssc_b">SSC Board:</label>
+        <select name="ssc_b" required>
+            <option value="1">Central</option>
+            <option value="0">Others</option>
+        </select>
+        <br>
+        <label for="hsc_p">HSC Percentage:</label>
+        <input type="text" name="hsc_p"  required>
+        <br>
+        <label for="hsc_b">HSC Board:</label>
+        <select name="hsc_b" required>
+            <option value="1">Central</option>
+            <option value="0">Others</option>
+        </select>
+        <br>
+        <label for="hsc_s">HSC Stream:</label>  
+        <select name="hsc_s" required>
+            <option value="0">Commerce</option>
+            <option value="1">Science</option>
+            <option value="2">Arts</option>
+        </select>
+        <br>
+        <label for="degree_p">Degree Percentage:</label>
+        <input type="text" name="degree_p"  required>
+        <br>
+        <label for="degree_t">Degree Type:</label>
+        <select name="degree_t" required>
+            <option value="0">Sci&Tech</option>
+            <option value="1">Comm&Mgmt</option>
+            <option value="2">Others</option>
+        </select>
+        <br>
+        <label for="workex">Work Experience:</label>
+        <select name="workex" required>
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+        </select>
+        <br>
+        <label for="etest_p">Employability Test Percentage:</label>
+        <input type="text" name="etest_p"  required>
+        <br>
+        <label for="specialisation">Specialisation:</label>
+        <select name="specialisation" required>
+            <option value="0">Mkt&HR</option>
+            <option value="1">Mkt&Fin</option>
+        </select>
+        <br>
+        <label for="mba_p">MBA Percentage:</label>
+        <input type="text" name="mba_p"  required>
+        <br>
+    
+        <input type="submit" value="Predict Placement">
+    </form>
+    </div>
+    <div class="containert">
+    {% if result %}
+    <h2>Placement Prediction:</h2> 
+    <p id="if">The candidate is predicted to be: <b id="i">{{ result }}</b></p>
+    {% endif %}
+    <div id="bn">
+        Made by Shreshth 😊 
+        </div>
+    </div>
+   
+    </div>
+    
+</body>
+</html>
