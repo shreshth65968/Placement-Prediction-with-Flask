@@ -3,6 +3,6 @@ numpy
 joblib
 Pandas
 matplotlib
-sklearn
+scikit-learn==1.2.2
 gunicorn
 seaborn
