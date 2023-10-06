@@ -24,7 +24,7 @@ def index():
 
         
         #input_data = [[gender, ssc_p, ssc_b, hsc_p, hsc_b,hsc_s, degree_p, degree_t, workex, etest_p,specialisation, mba_p]]
-        int_features=[int(x) for x in request.form.values()]
+        int_features=[float(x) for x in request.form.values()]
         input_data=[np.array(int_features)]
         prediction = model.predict(input_data)
 
